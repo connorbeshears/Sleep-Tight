@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    let sleepCont = SleepTimerModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +19,39 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
+    @IBOutlet weak var statusLBL: UILabel!
+    @IBOutlet weak var timeLBL: UILabel!
+    @IBOutlet weak var endLBL: UILabel!
+    @IBOutlet weak var diffLBL: UILabel!
+    
+    var hasStarted = false
+    @IBAction func submitTime(_ sender: Any) {
+        let form = DateFormatter()
+        form.dateStyle = .none
+        form.timeStyle = .short
+        if(!hasStarted){
+            statusLBL.text = "Time has started"
+            sleepCont.timerStart()
+            timeLBL.text = sleepCont.displayStart()
+            hasStarted = true;
+        }
+        else{
+            statusLBL.text = "Time has ended"
+            sleepCont.timerEnd()
+            endLBL.text = sleepCont.displayEnd()
+            var diffTime = sleepCont.calcDiff()
+            diffLBL.text = sleepCont.convertToString()
+            hasStarted = false;
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
 }
 
