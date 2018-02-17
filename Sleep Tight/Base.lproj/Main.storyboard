@@ -73,7 +73,7 @@
                         <color key="backgroundColor" red="0.11730947277480119" green="0.94509624825919714" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="First" image="SleepIcons25" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="diffLBL" destination="tML-OG-Pej" id="awr-dm-ubO"/>
                         <outlet property="endLBL" destination="spa-bv-IgV" id="672-Aj-ItZ"/>
@@ -112,7 +112,7 @@
                         <color key="backgroundColor" red="0.095843558325330203" green="0.89745071808979848" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Second" image="GraphIcons" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +170,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="GraphIcons" width="25" height="25"/>
+        <image name="SleepIcons25" width="25" height="25"/>
     </resources>
 </document>
