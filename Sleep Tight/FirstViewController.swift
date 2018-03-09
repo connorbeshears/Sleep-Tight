@@ -11,6 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
     let sleepCont = SleepTimerModel()
     override func viewDidLoad() {
+        roundedBTN.layer.cornerRadius = 25
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -21,23 +22,28 @@ class FirstViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var roundedBTN: UIButton!
     @IBOutlet weak var statusLBL: UILabel!
     @IBOutlet weak var timeLBL: UILabel!
     @IBOutlet weak var endLBL: UILabel!
     @IBOutlet weak var diffLBL: UILabel!
     
     var hasStarted = false
-    @IBAction func submitTime(_ sender: Any) {
+    @IBAction func submitTime(_ sender: UIButton) {
         let form = DateFormatter()
         form.dateStyle = .none
         form.timeStyle = .short
         if(!hasStarted){
+            (sender as AnyObject).setTitle("Stop", for: .normal)
+            sender.backgroundColor = UIColor.red
             statusLBL.text = "Time has started"
             sleepCont.timerStart()
             timeLBL.text = sleepCont.displayStart()
             hasStarted = true;
         }
         else{
+            (sender as AnyObject).setTitle("Start", for: .normal)
+            sender.backgroundColor = UIColor.green
             statusLBL.text = "Time has ended"
             sleepCont.timerEnd()
             endLBL.text = sleepCont.displayEnd()
@@ -45,13 +51,6 @@ class FirstViewController: UIViewController {
             diffLBL.text = sleepCont.convertToString()
             hasStarted = false;
         }
-        
-        
-        
     }
-    
-    
-    
-    
 }
 
