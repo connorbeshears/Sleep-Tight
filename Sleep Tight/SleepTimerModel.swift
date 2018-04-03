@@ -14,7 +14,9 @@ class SleepTimerModel{
     var endTime:Date = Date()
     var diffTime:TimeInterval = TimeInterval()
     let form:DateFormatter = DateFormatter()
-
+    
+    enum feelings{case Terrible,Poorly,Okay,Good,Great}
+    
     func timerStart(){
         startTime = Date()
     }
@@ -52,5 +54,7 @@ class SleepTimerModel{
         
         return "\(hours):\(minutes):\(seconds)"
     }
+    
+    
     
 }
