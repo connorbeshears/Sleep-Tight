@@ -3,7 +3,7 @@
 //  Sleep Tight
 //
 //  Created by Connor Beshears on 2/15/18.
-//  Copyright © 2018 Connor Beshears. All rights reserved.
+//  Copyright © 2018 Connor Beshears and Kylo. All rights reserved.
 //
 
 import Foundation
@@ -13,10 +13,21 @@ class SleepTimerModel{
     var startTime:Date = Date()
     var endTime:Date = Date()
     var diffTime:TimeInterval = TimeInterval()
-    let form:DateFormatter = DateFormatter()
+    let form:DateFormatter
     
-    enum feelings{case Terrible,Poorly,Okay,Good,Great}
+    let feelings:[String]     //For displaying options
+    var feelNum:Int                                     //To store feeling selected
     
+    
+    init()
+    {
+        self.startTime = Date()
+        self.endTime = Date()
+        self.diffTime = TimeInterval()
+        self.form = DateFormatter()
+        self.feelings = ["Terrible","Poorly","Okay","Good","Great"]
+        self.feelNum = 0
+    }
     func timerStart(){
         startTime = Date()
     }
@@ -54,7 +65,9 @@ class SleepTimerModel{
         
         return "\(hours):\(minutes):\(seconds)"
     }
-    
+    func setFeel(x: Int){
+        feelNum = x
+    }
     
     
 }

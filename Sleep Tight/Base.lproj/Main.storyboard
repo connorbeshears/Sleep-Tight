@@ -75,6 +75,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitTime:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Zqt-qi-KPR"/>
+                                    <segue destination="9pm-T3-DFe" kind="show" identifier="mySegue" id="j2O-4b-hXP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,22 +130,37 @@
         <!--Item-->
         <scene sceneID="Rpo-lN-2Eh">
             <objects>
-                <viewController id="9pm-T3-DFe" sceneMemberID="viewController">
+                <viewController id="9pm-T3-DFe" customClass="ResponseViewController" customModule="Sleep_Tight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdw-41-T3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NkI-zT-zlK">
+                                <rect key="frame" x="8" y="184" width="359" height="342"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="IQJ-oT-IDw">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQJ-oT-IDw" id="XKO-pH-nEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="HkW-AN-Rh8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pm-T3-DFe" id="Iog-cQ-FOo"/>
+                                    <outlet property="delegate" destination="9pm-T3-DFe" id="uVK-Tj-AXN"/>
+                                </connections>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Response Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
-                                <rect key="frame" x="8" y="133" width="359" height="126"/>
+                                <rect key="frame" x="8" y="8" width="359" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For recording how they feel after they sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaT-sS-w69">
-                                <rect key="frame" x="0.0" y="267" width="367" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -155,8 +171,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="sW5-0q-C0m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow9-ia-oS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6Ip-ff-tvw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1422" y="-476"/>
+            <point key="canvasLocation" x="1601" y="-476"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

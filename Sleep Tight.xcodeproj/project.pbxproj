@@ -14,6 +14,7 @@
 		04C4AA1220336DA400D70EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C4AA1020336DA400D70EEC /* Main.storyboard */; };
 		04C4AA1420336DA400D70EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C4AA1320336DA400D70EEC /* Assets.xcassets */; };
 		04C4AA1720336DA400D70EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C4AA1520336DA400D70EEC /* LaunchScreen.storyboard */; };
+		9466A7AA20742C55002D5391 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A7A920742C55002D5391 /* ResponseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04C4AA1320336DA400D70EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C4AA1620336DA400D70EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C4AA1820336DA400D70EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9466A7A920742C55002D5391 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				04C4AA0A20336DA400D70EEC /* AppDelegate.swift */,
 				04C4AA0C20336DA400D70EEC /* FirstViewController.swift */,
+				9466A7A920742C55002D5391 /* ResponseViewController.swift */,
 				04C4AA0E20336DA400D70EEC /* SecondViewController.swift */,
 				04C4AA1020336DA400D70EEC /* Main.storyboard */,
 				04C4AA1320336DA400D70EEC /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				04C4AA0B20336DA400D70EEC /* AppDelegate.swift in Sources */,
 				04C4AA0D20336DA400D70EEC /* FirstViewController.swift in Sources */,
 				0459DFAE203636F60045A939 /* SleepTimerModel.swift in Sources */,
+				9466A7AA20742C55002D5391 /* ResponseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

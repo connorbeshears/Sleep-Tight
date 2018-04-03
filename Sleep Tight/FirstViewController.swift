@@ -51,7 +51,9 @@ class FirstViewController: UIViewController {
             var diffTime = sleepCont.calcDiff()
             diffLBL.text = sleepCont.convertToString()
             hasStarted = false;
-            displayAlert()
+            performSegue(withIdentifier: "mySegue", sender: nil)
+            //displayAlert()
+            
         }
     }
     
@@ -69,6 +71,9 @@ class FirstViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    @IBAction func unwindToSegue(segue: UIStoryboardSegue){
+        
     }
     
 }

@@ -10,11 +10,14 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    
+    
     var window: UIWindow?
-
+    static var sleepModel: SleepTimerModel!
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppDelegate.sleepModel = SleepTimerModel()
         return true
     }
 
