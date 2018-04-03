@@ -30,20 +30,7 @@ class FirstViewController: UIViewController {
     
     var hasStarted = false
     @IBAction func submitTime(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Feelings", message: "Enter how you feel after sleeping", preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addTextField { (textField) in
-            textField.text = "Enter feelings"
-        }
-        
-        alert.addAction(UIAlertAction(title: "Enter", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0]
-            //print("Text field: \(textField?.text)")
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
-        
-
         let form = DateFormatter()
         form.dateStyle = .none
         form.timeStyle = .short
@@ -64,10 +51,25 @@ class FirstViewController: UIViewController {
             var diffTime = sleepCont.calcDiff()
             diffLBL.text = sleepCont.convertToString()
             hasStarted = false;
-            self.present(alert, animated: true, completion: nil)
+            displayAlert()
         }
     }
     
+    func displayAlert() {
+        let alert = UIAlertController(title: "Feelings", message: "Enter how you feel after sleeping", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addTextField { (textField) in
+            textField.text = "Enter feelings"
+        }
+        
+        alert.addAction(UIAlertAction(title: "Enter", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            //print("Text field: \(textField?.text)")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
 }
 
