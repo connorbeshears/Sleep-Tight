@@ -57,7 +57,7 @@ class FirstViewController: UIViewController {
         }
         else{
             (sender as AnyObject).setTitle("Start", for: .normal)
-            sender.backgroundColor = UIColor.green
+            sender.backgroundColor = UIColor.blue
             statusLBL.text = "Time has ended"
             sleepCont.timerEnd()
             endLBL.text = sleepCont.displayEnd()
