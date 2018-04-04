@@ -66,16 +66,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDz-mF-jNj">
-                                <rect key="frame" x="139" y="316" width="96" height="52"/>
+                                <rect key="frame" x="61" y="338" width="96" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1109166102" green="0.05475768458" blue="0.69996761659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.081107923970770449" green="0.53935085531502591" blue="0.42960417839319304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submitTime:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Zqt-qi-KPR"/>
-                                    <segue destination="9pm-T3-DFe" kind="show" identifier="mySegue" id="j2O-4b-hXP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lQ-lh-cIR">
+                                <rect key="frame" x="211" y="338" width="96" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1109166102" green="0.05475768458" blue="0.69996761659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTime:" destination="9pv-A4-QxB" eventType="touchUpInside" id="pcd-Uh-LnV"/>
+                                    <segue destination="9pm-T3-DFe" kind="show" id="hlw-gL-79E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,6 +98,7 @@
                         <outlet property="diffLBL" destination="tML-OG-Pej" id="awr-dm-ubO"/>
                         <outlet property="endLBL" destination="spa-bv-IgV" id="672-Aj-ItZ"/>
                         <outlet property="roundedBTN" destination="UDz-mF-jNj" id="IIN-Zr-NHg"/>
+                        <outlet property="roundedBTN2" destination="5lQ-lh-cIR" id="ls8-5f-ZlN"/>
                         <outlet property="statusLBL" destination="fJz-Yn-O0e" id="iwD-bN-5yM"/>
                         <outlet property="timeLBL" destination="YO2-qZ-vCt" id="Yjd-WD-vKR"/>
                     </connections>
@@ -118,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.095843558325330203" green="0.89745071808979848" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.24758212214306852" green="0.24758212214306852" blue="0.24758212214306852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="GraphIcons" id="cPa-gy-q4n"/>
@@ -135,8 +148,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="auroral-belt_1" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-53-bjT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Response Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
+                                <rect key="frame" x="8" y="8" width="359" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NkI-zT-zlK">
-                                <rect key="frame" x="8" y="184" width="359" height="342"/>
+                                <rect key="frame" x="8" y="162" width="359" height="342"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -157,13 +181,6 @@
                                     <outlet property="delegate" destination="9pm-T3-DFe" id="uVK-Tj-AXN"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Response Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
-                                <rect key="frame" x="8" y="8" width="359" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4oP-Vl-ghZ"/>
@@ -173,7 +190,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow9-ia-oS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Ip-ff-tvw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="-476"/>
+            <point key="canvasLocation" x="1600.8" y="-476.31184407796104"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -197,6 +214,7 @@
     <resources>
         <image name="GraphIcons" width="25" height="25"/>
         <image name="SleepIcons25" width="25" height="25"/>
+        <image name="auroral-belt_1" width="1040" height="1526"/>
         <image name="gallery-13_simple-iphone-5-wallpapers-ios8-minimal-shooting-stars-1" width="744" height="1392"/>
     </resources>
 </document>
