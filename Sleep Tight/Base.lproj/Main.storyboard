@@ -165,6 +165,14 @@
                                     <action selector="printData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="aI8-Na-QRf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-aw-alt">
+                                <rect key="frame" x="115" y="176" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete All"/>
+                                <connections>
+                                    <action selector="deleteAll:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pfM-5c-D4N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.24758212214306852" green="0.24758212214306852" blue="0.24758212214306852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>

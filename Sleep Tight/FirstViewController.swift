@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class FirstViewController: UIViewController {
-    let sleepCont = SleepTimerModel()
+    public let sleepCont = AppDelegate.sleepModel
     override func viewDidLoad() {
         roundedBTN.layer.cornerRadius = 25
         roundedBTN2.layer.cornerRadius = 25
@@ -59,22 +59,10 @@ class FirstViewController: UIViewController {
         statusLBL.text = "Time has ended"
         sleepCont.timerEnd()
         endLBL.text = sleepCont.displayEnd()
-        var diffTime = sleepCont.calcDiff()
+        sleepCont.calcDiff()
         diffLBL.text = sleepCont.convertToString()
         hasStarted = false;
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        let sleepMinTmp = sleepCont.getMinutes()
-        let sleepMin:Int16 = Int16(sleepMinTmp)
-        sleepSubmit.timeInMinutes = sleepMin
-        sleepSubmit.date = sleepCont.displayDate()
-        do{
-            try moc.save()
-            print("Saved")
-        } catch {
-            print("Error: \(error)")
-        }
-        
+
         
         //performSegue(withIdentifier: "mySegue", sender: nil)
         //displayAlert()
@@ -102,7 +90,6 @@ class FirstViewController: UIViewController {
     */
  
     @IBAction func unwindToSegue(segue: UIStoryboardSegue){
-        
     }
     
 }

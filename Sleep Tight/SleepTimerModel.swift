@@ -19,8 +19,7 @@ class SleepTimerModel{
     var feelNum:Int                                     //To store feeling selected
     
     
-    init()
-    {
+    init() {
         self.startTime = Date()
         self.endTime = Date()
         self.diffTime = TimeInterval()
@@ -28,27 +27,27 @@ class SleepTimerModel{
         self.feelings = ["Terrible","Poorly","Okay","Good","Great"]
         self.feelNum = 0
     }
-    func timerStart(){
+    func timerStart() {
         startTime = Date()
     }
     
-    func timerEnd(){
+    func timerEnd() {
         endTime = Date()
     }
     
-    func displayDate() -> String{
+    func displayDate() -> String {
         form.dateStyle = .long
         form.timeStyle = .none
         return(form.string(from: endTime))
     }
     
-    func displayStart() -> String{
+    func displayStart() -> String {
         form.timeStyle = .medium
         form.dateStyle = .none
         return(form.string(from: startTime))
     }
     
-    func displayEnd() -> String{
+    func displayEnd() -> String {
         form.timeStyle = .medium
         form.dateStyle = .none
         return(form.string(from: endTime))
@@ -58,26 +57,29 @@ class SleepTimerModel{
         diffTime = endTime.timeIntervalSince(startTime)
     }
     
-    func displayDiff() -> String{
+    func displayDiff() -> String {
         return("\(diffTime)")
     }
     
-    func convertToString() -> String{
+    func convertToString() -> String {
         let tmp = Int(diffTime)
         
         let seconds = tmp % 60
         let minutes = (tmp / 60) % 60
         let hours = (tmp / 3600)
         
-        return "\(hours):\(minutes):\(seconds)"
+        return "\(hours)h:\(minutes)m:\(seconds)s"
     }
-    func setFeel(x: Int){
+    func setFeel(x: Int) {
         feelNum = x
     }
+    func getFeel(index: Int) -> String{
+        return(feelings[index])
+    }
     
-    func getMinutes() -> Int{
-        let tmp = Int(diffTime)
-        
+    func getMinutes() -> Int {
+        var tmp = Int(diffTime)
+        tmp = tmp / 60
         return(tmp)
     }
     
