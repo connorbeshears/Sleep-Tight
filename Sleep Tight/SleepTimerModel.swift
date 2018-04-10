@@ -36,6 +36,12 @@ class SleepTimerModel{
         endTime = Date()
     }
     
+    func displayDate() -> String{
+        form.dateStyle = .long
+        form.timeStyle = .none
+        return(form.string(from: endTime))
+    }
+    
     func displayStart() -> String{
         form.timeStyle = .medium
         form.dateStyle = .none
@@ -67,6 +73,12 @@ class SleepTimerModel{
     }
     func setFeel(x: Int){
         feelNum = x
+    }
+    
+    func getMinutes() -> Int{
+        let tmp = Int(diffTime)
+        
+        return(tmp)
     }
     
     

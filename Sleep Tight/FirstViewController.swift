@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FirstViewController: UIViewController {
     let sleepCont = SleepTimerModel()
@@ -52,12 +53,28 @@ class FirstViewController: UIViewController {
         // (sender as AnyObject).setTitle("Start", for: .normal)
         //sender.backgroundColor = UIColor.blue
         
+       
+        
+        
         statusLBL.text = "Time has ended"
         sleepCont.timerEnd()
         endLBL.text = sleepCont.displayEnd()
         var diffTime = sleepCont.calcDiff()
         diffLBL.text = sleepCont.convertToString()
         hasStarted = false;
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
+        let sleepMinTmp = sleepCont.getMinutes()
+        let sleepMin:Int16 = Int16(sleepMinTmp)
+        sleepSubmit.timeInMinutes = sleepMin
+        sleepSubmit.date = sleepCont.displayDate()
+        do{
+            try moc.save()
+            print("Saved")
+        } catch {
+            print("Error: \(error)")
+        }
+        
         
         //performSegue(withIdentifier: "mySegue", sender: nil)
         //displayAlert()

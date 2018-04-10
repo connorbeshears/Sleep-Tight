@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SecondViewController: UIViewController {
     override func viewDidLoad() {
@@ -18,7 +19,19 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func printData(_ sender: Any) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest:NSFetchRequest<SleepTimeMO> = NSFetchRequest(entityName: "Time")
+        do{
+            let fetchAll = try moc.fetch(fetchRequest)
+            for ob in fetchAll{
+                print("Date: \(ob.date!) \n Time in Minutes \(ob.timeInMinutes)")
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
 }
 
