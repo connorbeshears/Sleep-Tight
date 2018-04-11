@@ -8,11 +8,34 @@
 
 import UIKit
 import CoreData
-
+import Charts
 class SecondViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //grab data from core data
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchReq:NSFetchRequest<SleepTimeMO> = NSFetchRequest(entityName: "Time")
+        var sleepArr:[SleepTimeMO] = []
+        do{
+            let allData = try moc.fetch(fetchReq)
+            for x in allData{
+                sleepArr.append(x)
+            }
+            
+        } catch {
+            print("Error \(error)")
+        }
+        
+        //set up the chart
+        chartController.clear()
+        setChart(data:sleepArr)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,5 +70,29 @@ class SecondViewController: UIViewController {
         }
         
     }
+    
+    
+    //Chart view code
+    @IBOutlet weak var chartController: BarChartView!
+    func setChart(data:[SleepTimeMO]){
+        chartController.noDataText = "No data available"
+        
+        var dataEntries:[BarChartDataEntry] = []
+        
+        for i in 0 ..< data.count{
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(data[i].timeInMinutes))
+            dataEntries.append(dataEntry)
+        }
+        
+        
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Minutes")
+        chartDataSet.colors = [UIColor.red]
+        let chartData = BarChartData(dataSet: chartDataSet)
+        chartController.data = chartData
+        
+        
+    }
+    
+    
 }
 

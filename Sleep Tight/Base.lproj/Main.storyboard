@@ -92,31 +92,31 @@
                         <constraints>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="64M-B8-D52"/>
                             <constraint firstItem="FoU-0F-8H6" firstAttribute="centerX" secondItem="fJz-Yn-O0e" secondAttribute="centerX" id="98a-OT-zh8"/>
+                            <constraint firstItem="5lQ-lh-cIR" firstAttribute="centerY" secondItem="UDz-mF-jNj" secondAttribute="centerY" id="ALF-ww-XgU"/>
                             <constraint firstItem="YO2-qZ-vCt" firstAttribute="leading" secondItem="spa-bv-IgV" secondAttribute="leading" id="Biy-bY-sLF"/>
                             <constraint firstItem="YO2-qZ-vCt" firstAttribute="top" secondItem="fJz-Yn-O0e" secondAttribute="bottom" constant="8" symbolic="YES" id="D3Q-ZA-HK3"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="Eh2-7E-Hz6"/>
                             <constraint firstItem="FoU-0F-8H6" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="F8l-yl-h22"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="93" id="H1X-vh-AH9"/>
                             <constraint firstItem="fJz-Yn-O0e" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="12" id="IW9-vu-YTa"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="5lQ-lh-cIR" secondAttribute="trailing" constant="68" id="Lhf-dX-nCX"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="5lQ-lh-cIR" secondAttribute="bottom" constant="227" id="M3b-di-b5A"/>
                             <constraint firstItem="FoU-0F-8H6" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" id="MpP-ci-BFQ"/>
                             <constraint firstItem="UDz-mF-jNj" firstAttribute="top" secondItem="tML-OG-Pej" secondAttribute="bottom" constant="69" id="SH4-yr-y0D"/>
-                            <constraint firstItem="UDz-mF-jNj" firstAttribute="top" secondItem="5lQ-lh-cIR" secondAttribute="top" id="SsH-eO-8ff"/>
                             <constraint firstItem="tML-OG-Pej" firstAttribute="top" secondItem="spa-bv-IgV" secondAttribute="bottom" constant="8" symbolic="YES" id="ZOO-pE-dcb"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="YO2-qZ-vCt" secondAttribute="trailing" constant="4" id="Zl9-ja-XJy"/>
+                            <constraint firstItem="5lQ-lh-cIR" firstAttribute="top" secondItem="UDz-mF-jNj" secondAttribute="top" id="cdd-nC-1He"/>
                             <constraint firstItem="spa-bv-IgV" firstAttribute="leading" secondItem="tML-OG-Pej" secondAttribute="leading" id="dA9-4Z-8nU"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="5lQ-lh-cIR" secondAttribute="bottom" constant="227" id="dMR-hn-jaF"/>
                             <constraint firstItem="FoU-0F-8H6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="e44-an-zIK"/>
                             <constraint firstItem="fJz-Yn-O0e" firstAttribute="leading" secondItem="YO2-qZ-vCt" secondAttribute="leading" id="fIT-TW-cyw"/>
                             <constraint firstItem="UDz-mF-jNj" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="61" id="mPt-5y-DrM"/>
+                            <constraint firstItem="5lQ-lh-cIR" firstAttribute="leading" secondItem="UDz-mF-jNj" secondAttribute="trailing" constant="54" id="nHY-9i-Pe0"/>
                             <constraint firstItem="spa-bv-IgV" firstAttribute="top" secondItem="YO2-qZ-vCt" secondAttribute="bottom" constant="8" symbolic="YES" id="nt4-Id-jmP"/>
                             <constraint firstItem="fJz-Yn-O0e" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="73" id="oFh-P1-bwN"/>
                             <constraint firstItem="FoU-0F-8H6" firstAttribute="centerX" secondItem="spa-bv-IgV" secondAttribute="centerX" id="oew-0V-bad"/>
                             <constraint firstAttribute="trailing" secondItem="FoU-0F-8H6" secondAttribute="trailing" id="rjw-vS-l98"/>
                             <constraint firstItem="FoU-0F-8H6" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="uaK-Lu-hef"/>
                             <constraint firstItem="tML-OG-Pej" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="ugI-Vg-fc2"/>
-                            <constraint firstItem="UDz-mF-jNj" firstAttribute="centerY" secondItem="5lQ-lh-cIR" secondAttribute="centerY" id="xlj-dY-WH8"/>
-                            <constraint firstItem="5lQ-lh-cIR" firstAttribute="leading" secondItem="UDz-mF-jNj" secondAttribute="trailing" constant="54" id="zX5-eW-bEx"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="5lQ-lh-cIR" secondAttribute="trailing" constant="68" id="wEY-KK-bmb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-476.31184407796104"/>
+            <point key="canvasLocation" x="796" y="-476"/>
         </scene>
         <!--Graphs-->
         <scene sceneID="wg7-f3-ORb">
@@ -143,22 +143,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Data Viewer" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="95" y="312" width="186" height="43"/>
+                                <rect key="frame" x="94" y="11" width="186" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With graphs from the data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="103" y="363" width="169.5" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv3-rs-YE6">
-                                <rect key="frame" x="133" y="412" width="109" height="30"/>
+                                <rect key="frame" x="8" y="543" width="109" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Print Data"/>
                                 <connections>
@@ -166,22 +159,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-aw-alt">
-                                <rect key="frame" x="115" y="176" width="144" height="30"/>
+                                <rect key="frame" x="215" y="543" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete All"/>
                                 <connections>
                                     <action selector="deleteAll:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pfM-5c-D4N"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-2S-I0Q" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="87" width="343" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With graphs from the data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="103" y="62" width="169.5" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.24758212214306852" green="0.24758212214306852" blue="0.24758212214306852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Graphs" image="GraphIcons" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="chartController" destination="3IU-2S-I0Q" id="z3k-Yy-7ty"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="508.69565217391306"/>
+            <point key="canvasLocation" x="796" y="256.82158920539734"/>
         </scene>
         <!--Item-->
         <scene sceneID="Rpo-lN-2Eh">
@@ -233,7 +242,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow9-ia-oS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Ip-ff-tvw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1600.8" y="-476.31184407796104"/>
+            <point key="canvasLocation" x="1626" y="-476"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
