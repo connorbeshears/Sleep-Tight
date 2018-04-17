@@ -54,6 +54,24 @@ class ResponseViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+     AppDelegate.sleepModel.setFeel(x:indexPath.row)
+     let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+     let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
+     let sleepMinTmp:Int = AppDelegate.sleepModel.getMinutes()
+     let sleepMin:Int16 = Int16(sleepMinTmp)
+     sleepSubmit.timeInMinutes = sleepMin
+     sleepSubmit.date = AppDelegate.sleepModel.displayDate()
+     let feelIndex:Int = AppDelegate.sleepModel.feelNum
+     let tmpFeelIndex:Int16 = Int16(feelIndex)
+     sleepSubmit.feelingIndex = tmpFeelIndex
+     do{
+     try moc.save()
+     print("Saved")
+     } catch {
+     print("Error: \(error)")
+     }
+     
+     
     */
 
 }
