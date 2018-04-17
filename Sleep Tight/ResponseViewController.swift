@@ -20,23 +20,33 @@ class ResponseViewController: UIViewController {
 
     @IBAction func terribleBtn(_ sender: Any) {
         sleepModel.setFeel(x: 0)
-    }
+        let feelIndex:Int = AppDelegate.sleepModel.feelNum
+        let tmpFeelIndex:Int16 = Int16(feelIndex)
+        sleepSubmit.feelingIndex = tmpFeelIndex    }
     
     @IBAction func poorlyBtn(_ sender: Any) {
         sleepModel.setFeel(x: 1)
-    }
+        let feelIndex:Int = AppDelegate.sleepModel.feelNum
+        let tmpFeelIndex:Int16 = Int16(feelIndex)
+        sleepSubmit.feelingIndex = tmpFeelIndex    }
     
     @IBAction func okayBtn(_ sender: Any) {
         sleepModel.setFeel(x: 2)
-    }
+        let feelIndex:Int = AppDelegate.sleepModel.feelNum
+        let tmpFeelIndex:Int16 = Int16(feelIndex)
+        sleepSubmit.feelingIndex = tmpFeelIndex    }
     
     @IBAction func goodBtn(_ sender: Any) {
         sleepModel.setFeel(x: 3)
-    }
+        let feelIndex:Int = AppDelegate.sleepModel.feelNum
+        let tmpFeelIndex:Int16 = Int16(feelIndex)
+        sleepSubmit.feelingIndex = tmpFeelIndex    }
     
     @IBAction func greatBtn(_ sender: Any) {
         sleepModel.setFeel(x: 4)
-    }
+        let feelIndex:Int = AppDelegate.sleepModel.feelNum
+        let tmpFeelIndex:Int16 = Int16(feelIndex)
+        sleepSubmit.feelingIndex = tmpFeelIndex    }
     
 
 
