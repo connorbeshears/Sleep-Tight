@@ -204,45 +204,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Response Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How did Yah Sleep?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
                                 <rect key="frame" x="8" y="8" width="359" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NkI-zT-zlK">
-                                <rect key="frame" x="8" y="162" width="359" height="342"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIg-VJ-lmL">
+                                <rect key="frame" x="85" y="285" width="93" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="IQJ-oT-IDw">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQJ-oT-IDw" id="XKO-pH-nEM">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="HkW-AN-Rh8"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                                <state key="normal" title="Poorly"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="9pm-T3-DFe" id="Iog-cQ-FOo"/>
-                                    <outlet property="delegate" destination="9pm-T3-DFe" id="uVK-Tj-AXN"/>
+                                    <action selector="poorlyBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="28x-ZS-MR2"/>
+                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="uoq-9l-7Rp"/>
                                 </connections>
-                            </tableView>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnY-Ay-hix">
+                                <rect key="frame" x="85" y="342" width="93" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Okayy"/>
+                                <connections>
+                                    <action selector="okayBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="KnF-53-tQA"/>
+                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="34s-0B-sbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1s-vb-bB5">
+                                <rect key="frame" x="85" y="397" width="93" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Good"/>
+                                <connections>
+                                    <action selector="goodBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="sON-DN-G0M"/>
+                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="nfb-YU-vlh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7E-Wv-k4M">
+                                <rect key="frame" x="85" y="450" width="93" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Great"/>
+                                <connections>
+                                    <action selector="greatBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="ozi-Go-JIf"/>
+                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="iDN-y8-wCN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuE-qs-ekC">
+                                <rect key="frame" x="79" y="220" width="104" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Terrible"/>
+                                <connections>
+                                    <action selector="terribleBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="1fb-oO-Mr6"/>
+                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="fIW-Hp-AXq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4oP-Vl-ghZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sW5-0q-C0m"/>
+                    <connections>
+                        <outlet property="goodBtn" destination="E1s-vb-bB5" id="7sv-HI-tqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow9-ia-oS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Ip-ff-tvw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1626" y="-476"/>
+            <point key="canvasLocation" x="1624.8" y="-476.31184407796104"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

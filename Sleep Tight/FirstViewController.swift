@@ -63,8 +63,6 @@ class FirstViewController: UIViewController {
         diffLBL.text = sleepCont.convertToString()
         hasStarted = false;
 
-        
-        //performSegue(withIdentifier: "mySegue", sender: nil)
         //displayAlert()
         
         //}
