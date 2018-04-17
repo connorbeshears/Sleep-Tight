@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0459DFAE203636F60045A939 /* SleepTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459DFAD203636F60045A939 /* SleepTimerModel.swift */; };
-		0497F32C207D510300C7BD5A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0497F329207D50F700C7BD5A /* Charts.framework */; };
-		0497F32D207D510300C7BD5A /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0497F329207D50F700C7BD5A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04C4AA0B20336DA400D70EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA0A20336DA400D70EEC /* AppDelegate.swift */; };
 		04C4AA0D20336DA400D70EEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA0C20336DA400D70EEC /* FirstViewController.swift */; };
 		04C4AA0F20336DA400D70EEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA0E20336DA400D70EEC /* SecondViewController.swift */; };
@@ -18,6 +16,7 @@
 		04C4AA1720336DA400D70EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C4AA1520336DA400D70EEC /* LaunchScreen.storyboard */; };
 		04D90E7E207D359600A282C4 /* Sleep Tight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04D90E7C207D359600A282C4 /* Sleep Tight.xcdatamodeld */; };
 		9466A7AA20742C55002D5391 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A7A920742C55002D5391 /* ResponseViewController.swift */; };
+		A06F03F60928F176DB30B45F /* Pods_Sleep_Tight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F62A6C598FBDC34ADD20A4 /* Pods_Sleep_Tight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,28 +34,7 @@
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
 		};
-		0497F32E207D510300C7BD5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0497F323207D50F600C7BD5A /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A58A4ED274A941CA248EA921;
-			remoteInfo = Charts;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		0497F330207D510300C7BD5A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0497F32D207D510300C7BD5A /* Charts.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0459DFAD203636F60045A939 /* SleepTimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTimerModel.swift; sourceTree = "<group>"; };
@@ -70,6 +48,9 @@
 		04C4AA1620336DA400D70EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C4AA1820336DA400D70EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D90E7D207D359600A282C4 /* Sleep Tight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Sleep Tight.xcdatamodel"; sourceTree = "<group>"; };
+		47F62A6C598FBDC34ADD20A4 /* Pods_Sleep_Tight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Tight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		495B72F8D2396FB44F6513D2 /* Pods-Sleep Tight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Tight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleep Tight/Pods-Sleep Tight.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1FFCBBBC925A107706AE7A /* Pods-Sleep Tight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Tight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleep Tight/Pods-Sleep Tight.release.xcconfig"; sourceTree = "<group>"; };
 		9466A7A920742C55002D5391 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0497F32C207D510300C7BD5A /* Charts.framework in Frameworks */,
+				A06F03F60928F176DB30B45F /* Pods_Sleep_Tight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +81,8 @@
 				04C4AA0920336DA400D70EEC /* Sleep Tight */,
 				04C4AA0820336DA400D70EEC /* Products */,
 				0497F323207D50F600C7BD5A /* Charts.xcodeproj */,
+				26E204393434B456BCD517DA /* Pods */,
+				DF577113BF5ADBAB27FEBC1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +111,23 @@
 			path = "Sleep Tight";
 			sourceTree = "<group>";
 		};
+		26E204393434B456BCD517DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				495B72F8D2396FB44F6513D2 /* Pods-Sleep Tight.debug.xcconfig */,
+				4C1FFCBBBC925A107706AE7A /* Pods-Sleep Tight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF577113BF5ADBAB27FEBC1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47F62A6C598FBDC34ADD20A4 /* Pods_Sleep_Tight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,15 +135,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C4AA1B20336DA400D70EEC /* Build configuration list for PBXNativeTarget "Sleep Tight" */;
 			buildPhases = (
+				21F2F15F0D2E6B9DBF1B7DEB /* [CP] Check Pods Manifest.lock */,
 				04C4AA0320336DA400D70EEC /* Sources */,
 				04C4AA0420336DA400D70EEC /* Frameworks */,
 				04C4AA0520336DA400D70EEC /* Resources */,
-				0497F330207D510300C7BD5A /* Embed Frameworks */,
+				83B9D1F5872DBACCC6D78505 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0497F32F207D510300C7BD5A /* PBXTargetDependency */,
 			);
 			name = "Sleep Tight";
 			productName = "Sleep Tight";
@@ -220,6 +220,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21F2F15F0D2E6B9DBF1B7DEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sleep Tight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83B9D1F5872DBACCC6D78505 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sleep Tight/Pods-Sleep Tight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sleep Tight/Pods-Sleep Tight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04C4AA0320336DA400D70EEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -235,14 +274,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0497F32F207D510300C7BD5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = 0497F32E207D510300C7BD5A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04C4AA1020336DA400D70EEC /* Main.storyboard */ = {
@@ -373,8 +404,8 @@
 		};
 		04C4AA1C20336DA400D70EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 495B72F8D2396FB44F6513D2 /* Pods-Sleep Tight.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -390,8 +421,8 @@
 		};
 		04C4AA1D20336DA400D70EEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1FFCBBBC925A107706AE7A /* Pods-Sleep Tight.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

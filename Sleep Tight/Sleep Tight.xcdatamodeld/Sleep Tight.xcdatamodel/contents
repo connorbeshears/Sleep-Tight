@@ -6,6 +6,6 @@
         <attribute name="timeInMinutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Time" positionX="430" positionY="-486" width="128" height="88"/>
+        <element name="Time" positionX="430" positionY="-486" width="128" height="90"/>
     </elements>
 </model>
