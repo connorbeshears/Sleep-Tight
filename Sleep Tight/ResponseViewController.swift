@@ -14,39 +14,72 @@ class ResponseViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
+        let sleepMinTmp:Int = AppDelegate.sleepModel.getMinutes()
+        let sleepMin:Int16 = Int16(sleepMinTmp)        // Do any additional setup after loading the view.
     }
 
     @IBAction func terribleBtn(_ sender: Any) {
         sleepModel.setFeel(x: 0)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
-        sleepSubmit.feelingIndex = tmpFeelIndex    }
+        sleepSubmit.feelingIndex = tmpFeelIndex
+        
+        do{
+            try moc.save()
+            print("Saved")
+        } catch {
+            print("Error: \(error)")
+        }    }
     
     @IBAction func poorlyBtn(_ sender: Any) {
         sleepModel.setFeel(x: 1)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
-        sleepSubmit.feelingIndex = tmpFeelIndex    }
+        sleepSubmit.feelingIndex = tmpFeelIndex
+        do{
+            try moc.save()
+            print("Saved")
+        } catch {
+            print("Error: \(error)")
+        }    }
     
     @IBAction func okayBtn(_ sender: Any) {
         sleepModel.setFeel(x: 2)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
-        sleepSubmit.feelingIndex = tmpFeelIndex    }
+        sleepSubmit.feelingIndex = tmpFeelIndex
+        do{
+            try moc.save()
+            print("Saved")
+        } catch {
+            print("Error: \(error)")
+        }    }
     
     @IBAction func goodBtn(_ sender: Any) {
         sleepModel.setFeel(x: 3)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
-        sleepSubmit.feelingIndex = tmpFeelIndex    }
+        sleepSubmit.feelingIndex = tmpFeelIndex
+        do{
+            try moc.save()
+            print("Saved")
+        } catch {
+            print("Error: \(error)")
+        }    }
     
     @IBAction func greatBtn(_ sender: Any) {
         sleepModel.setFeel(x: 4)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
-        sleepSubmit.feelingIndex = tmpFeelIndex    }
+        sleepSubmit.feelingIndex = tmpFeelIndex
+        do{
+            try moc.save()
+            print("Saved")
+        } catch {
+            print("Error: \(error)")
+        }    }
     
 
 
