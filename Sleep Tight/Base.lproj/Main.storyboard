@@ -200,60 +200,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="auroral-belt_1" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-53-bjT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="773ccd98675b13e682b2d0b049928451" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-53-bjT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How did Yah Sleep?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
-                                <rect key="frame" x="8" y="8" width="359" height="126"/>
+                                <rect key="frame" x="8" y="0.0" width="359" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIg-VJ-lmL">
-                                <rect key="frame" x="85" y="285" width="93" height="49"/>
+                                <rect key="frame" x="59" y="215" width="251" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Poorly"/>
+                                <color key="backgroundColor" red="0.0" green="0.022056191642177786" blue="0.76519996761658038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Poorly">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="poorlyBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="28x-ZS-MR2"/>
                                     <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="uoq-9l-7Rp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnY-Ay-hix">
-                                <rect key="frame" x="85" y="342" width="93" height="42"/>
+                                <rect key="frame" x="59" y="284" width="251" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Okayy"/>
+                                <color key="backgroundColor" red="0.010456226504755476" green="0.49380667098445596" blue="0.031390942539556287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Okayy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="okayBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="KnF-53-tQA"/>
                                     <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="34s-0B-sbM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1s-vb-bB5">
-                                <rect key="frame" x="85" y="397" width="93" height="40"/>
+                                <rect key="frame" x="59" y="352" width="251" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Good"/>
+                                <color key="backgroundColor" red="0.83065495466321237" green="0.37493781057452097" blue="0.11243240256969204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Good">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="goodBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="sON-DN-G0M"/>
                                     <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="nfb-YU-vlh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7E-Wv-k4M">
-                                <rect key="frame" x="85" y="450" width="93" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Great"/>
-                                <connections>
-                                    <action selector="greatBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="ozi-Go-JIf"/>
-                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="iDN-y8-wCN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuE-qs-ekC">
-                                <rect key="frame" x="79" y="220" width="104" height="57"/>
+                                <rect key="frame" x="59" y="148" width="251" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Terrible"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Terrible">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="terribleBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="1fb-oO-Mr6"/>
                                     <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="fIW-Hp-AXq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7E-Wv-k4M">
+                                <rect key="frame" x="59" y="419" width="251" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75720531088082899" green="0.12843394333692498" blue="0.068092935070944285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Great">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="greatBtn:" destination="9pm-T3-DFe" eventType="touchUpInside" id="ozi-Go-JIf"/>
+                                    <segue destination="6Ip-ff-tvw" kind="unwind" unwindAction="unwindToSegueWithSegue:" id="iDN-y8-wCN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,9 +310,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="773ccd98675b13e682b2d0b049928451" width="1079" height="1920"/>
         <image name="GraphIcons" width="25" height="25"/>
         <image name="SleepIcons25" width="25" height="25"/>
-        <image name="auroral-belt_1" width="1040" height="1526"/>
         <image name="gallery-13_simple-iphone-5-wallpapers-ios8-minimal-shooting-stars-1" width="744" height="1392"/>
     </resources>
 </document>
