@@ -261,9 +261,6 @@
                         <viewLayoutGuide key="safeArea" id="4oP-Vl-ghZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sW5-0q-C0m"/>
-                    <connections>
-                        <outlet property="goodBtn" destination="E1s-vb-bB5" id="7sv-HI-tqp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow9-ia-oS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Ip-ff-tvw" userLabel="Exit" sceneMemberID="exit"/>

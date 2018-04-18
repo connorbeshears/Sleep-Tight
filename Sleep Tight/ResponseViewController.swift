@@ -11,6 +11,7 @@ import CoreData
 
 class ResponseViewController: UIViewController {
     let sleepModel = AppDelegate.sleepModel
+   
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class ResponseViewController: UIViewController {
     }
 
     @IBAction func terribleBtn(_ sender: Any) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
         sleepModel.setFeel(x: 0)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
@@ -34,6 +37,8 @@ class ResponseViewController: UIViewController {
         }    }
     
     @IBAction func poorlyBtn(_ sender: Any) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
         sleepModel.setFeel(x: 1)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
@@ -46,6 +51,8 @@ class ResponseViewController: UIViewController {
         }    }
     
     @IBAction func okayBtn(_ sender: Any) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
         sleepModel.setFeel(x: 2)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
@@ -58,6 +65,8 @@ class ResponseViewController: UIViewController {
         }    }
     
     @IBAction func goodBtn(_ sender: Any) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
         sleepModel.setFeel(x: 3)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
@@ -70,6 +79,8 @@ class ResponseViewController: UIViewController {
         }    }
     
     @IBAction func greatBtn(_ sender: Any) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
         sleepModel.setFeel(x: 4)
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
