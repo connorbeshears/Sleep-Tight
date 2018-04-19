@@ -49,7 +49,7 @@ class SecondViewController: UIViewController {
         do{
             let fetchAll = try moc.fetch(fetchRequest)
             for ob in fetchAll{
-                print("Date: \(ob.date!) \nTime in Minutes \(ob.timeInMinutes)\nFeeling: \(AppDelegate.sleepModel.getFeel(index: Int(ob.feelingIndex)))")
+                print("Date: \(ob.date) \nTime in Minutes \(ob.timeInMinutes)\nFeeling: \(AppDelegate.sleepModel.getFeel(index: Int(ob.feelingIndex)))")
             }
         } catch {
             print("Error: \(error)")

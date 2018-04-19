@@ -77,9 +77,9 @@ class SleepTimerModel{
         return(feelings[index])
     }
     
-    func getMinutes() -> Int {
-        var tmp = Int(diffTime)
-        //tmp = tmp / 60
+    func getMinutes() -> Double {
+        var tmp = Double(diffTime)
+        tmp = Double(tmp) / Double(60)
         return(tmp)
     }
     

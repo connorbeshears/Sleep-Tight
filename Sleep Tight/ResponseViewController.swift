@@ -15,31 +15,37 @@ class ResponseViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        let sleepMinTmp:Int = AppDelegate.sleepModel.getMinutes()
-        let sleepMin:Int16 = Int16(sleepMinTmp)        // Do any additional setup after loading the view.
+//        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
+//        let sleepMinTmp:Double = AppDelegate.sleepModel.getMinutes()
+//        let sleepMin:Int16 = Int16(sleepMinTmp)        // Do any additional setup after loading the view.
     }
 
     @IBAction func terribleBtn(_ sender: Any) {
+        AppDelegate.sleepModel.setFeel(x:0)
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        sleepModel.setFeel(x: 0)
+        let sleepMinTmp:Double = AppDelegate.sleepModel.getMinutes()
+        sleepSubmit.timeInMinutes = sleepMinTmp
+        sleepSubmit.date = AppDelegate.sleepModel.displayDate()
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
         sleepSubmit.feelingIndex = tmpFeelIndex
-        
         do{
             try moc.save()
             print("Saved")
         } catch {
             print("Error: \(error)")
-        }    }
+        }
+    }
     
     @IBAction func poorlyBtn(_ sender: Any) {
+        AppDelegate.sleepModel.setFeel(x:1)
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        sleepModel.setFeel(x: 1)
+        let sleepMinTmp:Double = AppDelegate.sleepModel.getMinutes()
+        sleepSubmit.timeInMinutes = sleepMinTmp
+        sleepSubmit.date = AppDelegate.sleepModel.displayDate()
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
         sleepSubmit.feelingIndex = tmpFeelIndex
@@ -48,12 +54,16 @@ class ResponseViewController: UIViewController {
             print("Saved")
         } catch {
             print("Error: \(error)")
-        }    }
+        }
+    }
     
     @IBAction func okayBtn(_ sender: Any) {
+        AppDelegate.sleepModel.setFeel(x:2)
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        sleepModel.setFeel(x: 2)
+        let sleepMinTmp:Double = AppDelegate.sleepModel.getMinutes()
+        sleepSubmit.timeInMinutes = sleepMinTmp
+        sleepSubmit.date = AppDelegate.sleepModel.displayDate()
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
         sleepSubmit.feelingIndex = tmpFeelIndex
@@ -62,12 +72,16 @@ class ResponseViewController: UIViewController {
             print("Saved")
         } catch {
             print("Error: \(error)")
-        }    }
+        }
+    }
     
     @IBAction func goodBtn(_ sender: Any) {
+        AppDelegate.sleepModel.setFeel(x:3)
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        sleepModel.setFeel(x: 3)
+        let sleepMinTmp:Double = AppDelegate.sleepModel.getMinutes()
+        sleepSubmit.timeInMinutes = sleepMinTmp
+        sleepSubmit.date = AppDelegate.sleepModel.displayDate()
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
         sleepSubmit.feelingIndex = tmpFeelIndex
@@ -76,12 +90,16 @@ class ResponseViewController: UIViewController {
             print("Saved")
         } catch {
             print("Error: \(error)")
-        }    }
+        }
+    }
     
     @IBAction func greatBtn(_ sender: Any) {
+        AppDelegate.sleepModel.setFeel(x:4)
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let sleepSubmit = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
-        sleepModel.setFeel(x: 4)
+        let sleepMinTmp:Double = AppDelegate.sleepModel.getMinutes()
+        sleepSubmit.timeInMinutes = sleepMinTmp
+        sleepSubmit.date = AppDelegate.sleepModel.displayDate()
         let feelIndex:Int = AppDelegate.sleepModel.feelNum
         let tmpFeelIndex:Int16 = Int16(feelIndex)
         sleepSubmit.feelingIndex = tmpFeelIndex
@@ -90,14 +108,17 @@ class ResponseViewController: UIViewController {
             print("Saved")
         } catch {
             print("Error: \(error)")
-        }    }
-    
+        }
+        }
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 //kill me
-    }
+        }
+        
+}
+        
     
 
     /*
@@ -128,4 +149,4 @@ class ResponseViewController: UIViewController {
      
     */
 
-}
+
