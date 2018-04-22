@@ -49,7 +49,7 @@ class SecondViewController: UIViewController {
         do{
             let fetchAll = try moc.fetch(fetchRequest)
             for ob in fetchAll{
-                print("Date: \(ob.date) \nTime in Minutes \(ob.timeInMinutes)\nFeeling: \(AppDelegate.sleepModel.getFeel(index: Int(ob.feelingIndex)))")
+                print("Date: \(ob.date!) \nTime in Minutes \(ob.timeInMinutes)\nFeeling: \(AppDelegate.sleepModel.getFeel(index: Int(ob.feelingIndex)))")
             }
         } catch {
             print("Error: \(error)")
@@ -71,25 +71,85 @@ class SecondViewController: UIViewController {
         
     }
     
+    @IBAction func popTest(_ sender: Any) {
+//        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let sleepSubmit1 = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
+        
+        for i in 11 ... 17{
+            let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let sleepSubmit1 = NSEntityDescription.insertNewObject(forEntityName: "Time", into: moc) as! SleepTimeMO
+            sleepSubmit1.date = "April \(i), 2018"
+            sleepSubmit1.feelingIndex = Int16(arc4random_uniform(6))
+            sleepSubmit1.timeInMinutes = Double(arc4random_uniform(4) + 4)
+            
+            do{
+                try moc.save()
+                print("Saved")
+            } catch {
+                print("Error: \(error)")
+            }
+        }
+    
+    }
     
     //Chart view code
-    @IBOutlet weak var chartController: BarChartView!
+    @IBOutlet weak var chartController: CombinedChartView!
     func setChart(data:[SleepTimeMO]){
         chartController.noDataText = "No data available"
         
-        var dataEntries:[BarChartDataEntry] = []
+        var dataBarEntries:[BarChartDataEntry] = []
+        var dataLineEntries:[ChartDataEntry] = []
+        var dates:[String] = []
         
         for i in 0 ..< data.count{
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(data[i].timeInMinutes))
-            dataEntries.append(dataEntry)
+            let lineEntry = ChartDataEntry(x: Double(i), y: Double(data[i].feelingIndex))
+            dataBarEntries.append(dataEntry)
+            dataLineEntries.append(lineEntry)
+            dates.append(data[i].date!)
         }
         
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Minutes")
-        chartDataSet.colors = [UIColor.red]
-        let chartData = BarChartData(dataSet: chartDataSet)
-        chartController.data = chartData
+        let barChartDataSet = BarChartDataSet(values: dataBarEntries, label: "Hours")
+        barChartDataSet.valueTextColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        barChartDataSet.axisDependency = .left
+        barChartDataSet.colors = [UIColor(red: 51.0/255.0, green: 153.0/255.0, blue: 102.0/255.0, alpha: 1.0)]
         
+        
+        
+        let lineChartDataSet = LineChartDataSet(values: dataLineEntries, label: "Feeling")
+        lineChartDataSet.colors = [UIColor(red: 168.0/255.0, green: 0.0/255.0, blue: 164.0/255.0, alpha: 1.0)]
+        lineChartDataSet.circleColors = [UIColor(red: 168.0/255.0, green: 0.0/255.0, blue: 164.0/255.0, alpha: 1.0)]
+        lineChartDataSet.valueTextColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        lineChartDataSet.axisDependency = .right
+        lineChartDataSet.drawValuesEnabled = false
+        
+        
+        let barChart = BarChartData(dataSet: barChartDataSet)
+        let lineChart = LineChartData(dataSet: lineChartDataSet)
+        
+        let tmpComb:[IChartDataSet] = [barChartDataSet, lineChartDataSet]
+        let comDataSet = CombinedChartData(dataSets: tmpComb)
+        comDataSet.barData = barChart
+        comDataSet.lineData = lineChart
+        chartController.xAxis.valueFormatter = IndexAxisValueFormatter(values: dates)
+        chartController.xAxis.granularity = 1
+        chartController.xAxis.labelRotationAngle = 45
+        chartController.xAxis.labelTextColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        chartController.leftAxis.labelTextColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        
+        chartController.rightAxis.drawLabelsEnabled = false
+        chartController.rightAxis.drawGridLinesEnabled = false
+        chartController.leftAxis.drawGridLinesEnabled = false
+        
+        chartController.leftAxis.axisMinimum = 0.0
+        chartController.rightAxis.axisMinimum = 0.0
+        chartController.xAxis.drawLabelsEnabled = true
+        chartController.chartDescription?.text = ""
+        chartController.xAxis.axisMinimum = -0.5
+        chartController.xAxis.axisMaximum = Double(data.count) - 0.5
+        
+        chartController.data = comDataSet
         
     }
     

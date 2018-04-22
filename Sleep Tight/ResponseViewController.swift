@@ -114,7 +114,6 @@ class ResponseViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-//kill me
         }
         
 }

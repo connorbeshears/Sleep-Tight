@@ -12,8 +12,8 @@ import CoreData
 class FirstViewController: UIViewController {
     public let sleepCont = AppDelegate.sleepModel
     override func viewDidLoad() {
-        roundedBTN.layer.cornerRadius = 25
-        roundedBTN2.layer.cornerRadius = 25
+        //roundedBTN.layer.cornerRadius = 25
+        //roundedBTN2.layer.cornerRadius = 25
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -55,14 +55,14 @@ class FirstViewController: UIViewController {
         
        
         
-        
-        statusLBL.text = "Time has ended"
-        sleepCont.timerEnd()
-        endLBL.text = sleepCont.displayEnd()
-        sleepCont.calcDiff()
-        diffLBL.text = sleepCont.convertToString()
-        hasStarted = false;
-
+        if(hasStarted == true){
+            statusLBL.text = "Time has ended"
+            sleepCont.timerEnd()
+            endLBL.text = sleepCont.displayEnd()
+            sleepCont.calcDiff()
+            diffLBL.text = sleepCont.convertToString()
+            hasStarted = false;
+        }
         //displayAlert()
         
         //}

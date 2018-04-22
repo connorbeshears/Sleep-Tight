@@ -80,6 +80,7 @@ class SleepTimerModel{
     func getMinutes() -> Double {
         var tmp = Double(diffTime)
         tmp = Double(tmp) / Double(60)
+        tmp = Double(tmp) / Double(60)
         return(tmp)
     }
     

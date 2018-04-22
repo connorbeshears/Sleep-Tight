@@ -48,7 +48,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDz-mF-jNj">
                                 <rect key="frame" x="61" y="354" width="96" height="36"/>
-                                <color key="backgroundColor" red="0.081107923970770449" green="0.53935085531502591" blue="0.42960417839319304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.25156986713409424" green="0.53045088052749634" blue="0.43528598546981812" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="tQV-vy-sTk"/>
                                 </constraints>
@@ -132,44 +132,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Data Viewer" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="94" y="11" width="186" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv3-rs-YE6">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Iphone-Stars-Wallpaper-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="NfU-5h-vP8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv3-rs-YE6">
                                 <rect key="frame" x="8" y="543" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="D9S-v2-GDB"/>
+                                </constraints>
                                 <state key="normal" title="Print Data"/>
                                 <connections>
                                     <action selector="printData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="aI8-Na-QRf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-aw-alt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-aw-alt">
                                 <rect key="frame" x="215" y="543" width="144" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete All"/>
                                 <connections>
                                     <action selector="deleteAll:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pfM-5c-D4N"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-2S-I0Q" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="87" width="343" height="448"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-2S-I0Q" customClass="CombinedChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="62" width="343" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With graphs from the data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="103" y="62" width="169.5" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8V-hx-5Yk">
+                                <rect key="frame" x="147" y="570" width="80" height="30"/>
+                                <state key="normal" title="Pop test"/>
+                                <connections>
+                                    <action selector="popTest:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="OtG-S0-wSh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="How have you slept?" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="85" y="0.0" width="205" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="0hh-1z-tVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.24758212214306852" green="0.24758212214306852" blue="0.24758212214306852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="97J-aw-alt" firstAttribute="leading" secondItem="Wv3-rs-YE6" secondAttribute="trailing" constant="98" id="3it-mD-EvN"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="3IU-2S-I0Q" secondAttribute="centerX" id="8yw-zR-az6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="NfU-5h-vP8" secondAttribute="bottom" constant="-18" id="B5a-ls-Vpl"/>
+                            <constraint firstItem="Q8V-hx-5Yk" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="147" id="J55-ln-1fF"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Q8V-hx-5Yk" secondAttribute="bottom" constant="18" id="K8c-7K-YDP"/>
+                            <constraint firstItem="Q8V-hx-5Yk" firstAttribute="top" secondItem="3IU-2S-I0Q" secondAttribute="bottom" constant="35" id="NU7-Sr-fpu"/>
+                            <constraint firstItem="3IU-2S-I0Q" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="PaU-pu-H9m"/>
+                            <constraint firstItem="Wv3-rs-YE6" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="8" id="QsQ-AQ-Rmd"/>
+                            <constraint firstItem="Wv3-rs-YE6" firstAttribute="baseline" secondItem="97J-aw-alt" secondAttribute="baseline" id="eLF-cw-Pem"/>
+                            <constraint firstAttribute="trailing" secondItem="NfU-5h-vP8" secondAttribute="trailing" id="ena-3c-CFF"/>
+                            <constraint firstItem="3IU-2S-I0Q" firstAttribute="centerX" secondItem="Q8V-hx-5Yk" secondAttribute="centerX" id="f5N-6h-vUX"/>
+                            <constraint firstItem="NfU-5h-vP8" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="fBd-kj-WcD"/>
+                            <constraint firstItem="Wv3-rs-YE6" firstAttribute="top" secondItem="3IU-2S-I0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="i6S-nH-R5k"/>
+                            <constraint firstItem="3IU-2S-I0Q" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="iFM-5I-W9O"/>
+                            <constraint firstItem="NfU-5h-vP8" firstAttribute="centerX" secondItem="Q8V-hx-5Yk" secondAttribute="centerX" id="oTy-sc-cbs"/>
+                            <constraint firstItem="3IU-2S-I0Q" firstAttribute="trailing" secondItem="97J-aw-alt" secondAttribute="trailing" id="q81-WF-P6h"/>
+                            <constraint firstItem="NfU-5h-vP8" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="top" id="qva-nc-mUl"/>
+                            <constraint firstItem="NfU-5h-vP8" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="ups-qp-Mdb"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="85" id="xd6-Qs-nkB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -190,13 +215,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="773ccd98675b13e682b2d0b049928451" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-53-bjT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auroral-belt_1" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-53-bjT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did you sleep?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-Tn-WNR">
                                 <rect key="frame" x="8" y="0.0" width="359" height="126"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIg-VJ-lmL">
@@ -327,6 +352,7 @@
     </scenes>
     <resources>
         <image name="GraphIcons" width="25" height="25"/>
+        <image name="Iphone-Stars-Wallpaper-Blue" width="640" height="1136"/>
         <image name="SleepIcons25" width="25" height="25"/>
         <image name="auroral-belt_1" width="1040" height="1526"/>
         <image name="gallery-13_simple-iphone-5-wallpapers-ios8-minimal-shooting-stars-1" width="744" height="1392"/>
