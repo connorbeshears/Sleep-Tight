@@ -1,5 +1,8 @@
 # Sleep-Tight
 Sleep Tracking app to obtain a persons sleeping habits and make predictions on how to better their sleep schedule 
+
+Note: Open using the .xcworkspace file, CocoaPods will bring build errors if you don't use that file
+
 How to use the app:
 
 	- The start button will start the time
